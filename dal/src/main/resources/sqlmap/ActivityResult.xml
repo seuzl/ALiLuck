@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+        "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap>
+    <typeAlias alias="ActivityResult" type="com.taobao.lottery.dal.dataObject.ActivityResult"/>
+    <resultMap id="ActivityResultResultMap" class="ActivityResult">
+        <result property="resultId" column="id" javaType="int" jdbcType="INT"/>
+        <result property="activityId" column="activity_id" javaType="int" jdbcType="INT" nullValue="0"/>
+        <result property="result" column="result" javaType="String" jdbcType="TEXT" nullValue="0"/>
+        <result property="createTime" column="gmt_create" javaType="String" jdbcType="DATETIME" nullValue="0"/>
+        <result property="modifyTime" column="gmt_modified" javaType="String" jdbcType="DATETIME" nullValue="0"/>
+        <result property="status" column="status" javaType="int" jdbcType="INT" nullValue="1"/>
+    </resultMap>
+
+    <!--
+       - ===============================================
+       - 列出所有的玩法
+       - ===============================================
+       -->
+    <select id="selectAllActivityResult"  resultMap="ActivityResultResultMap">
+        <![CDATA[
+        select
+                *
+        from
+                activity_result
+        where
+                status = 1
+        ]]>
+    </select>
+
+    <select id="selectResultByActivityId" resultClass="String" parameterClass="int">
+        <![CDATA[
+        select
+                result
+        from
+                activity_result
+        where
+                activity_id = #activityId# and status = 1
+        ]]>
+    </select>
+
+    <!-- - ===============================================
+    - 插入一条活动,自增ID
+    - ===============================================-->
+    <insert id="insertActivityResult" parameterClass="ActivityResult">
+        <selectKey keyProperty="resultId" resultClass="int" type="pre">
+            <![CDATA[
+            select LAST_INSERT_ID() as value7
+            ]]>
+        </selectKey>
+        <![CDATA[
+        insert into activity_result(
+                    activity_id,
+                    result,
+                    gmt_create,
+                    gmt_modified,
+                    status
+        ) values(
+                    #activityId#,
+                    #result#,
+                    #createTime#,
+                    #modifyTime#,
+                    #status#
+                   )
+        ]]>
+    </insert>
+
+</sqlMap>

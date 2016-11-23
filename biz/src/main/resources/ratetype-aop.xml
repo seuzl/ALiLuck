@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="authMonitorAutoProxyCreator"
+          class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="interceptorNames">
+            <list>
+                <value>rateAop</value>
+            </list>
+        </property>
+        <property name="beanNames">
+            <!--这里应该拦截指定的接口信息-->
+            <value></value>
+        </property>
+    </bean>
+
+    <bean id="rateAop" class="com.taobao.lottery.biz.rateaop.RateAop"/>
+
+</beans>

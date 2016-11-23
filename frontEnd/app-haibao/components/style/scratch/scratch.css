@@ -1,0 +1,293 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #eb4a4a;
+}
+.header-img {
+  width: 9.66666667rem;
+  margin: 0.13333333rem auto;
+  position: relative;
+}
+.header-img .flag-gruop {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+}
+.header-img img {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+}
+.scratch-wrap {
+  position: relative;
+  margin: 0.26666667rem auto;
+  width: 8rem;
+  height: 3.10666667rem;
+  background-image: url("http://gw.alicdn.com/bao/uploaded/TB1iLNDLpXXXXb7XXXXXXXXXXXX-704-233.png");
+  background-size: cover;
+}
+.choice {
+  width: 4.93333333rem;
+  margin: 0 auto;
+  padding: 0.2rem 0;
+  background-color: #404040;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 60px;
+}
+.choice span {
+  font-size: 22px;
+  color: #ffea00;
+}
+#myCanvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 7.46666667rem;
+  height: 2.26666667rem;
+  text-align: center;
+}
+#myCanvas p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 25px;
+  line-height: 1;
+  display: inline-block;
+}
+.banner {
+  margin: 0.13333333rem 0.64rem;
+}
+.banner img {
+  width: 100%;
+}
+.award-set {
+  font-size: 14px;
+  width: 8rem;
+  margin: 0 auto;
+  color: #fff;
+}
+.award-set li {
+  color: #f0f0f0;
+  margin-bottom: 0.13333333rem;
+}
+.award-set .level {
+  margin-right: 0.26666667rem;
+}
+.award-set .count {
+  float: right;
+}
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+}
+.modal .wrap {
+  will-change: transform;
+  position: relative;
+  top: -0.8rem;
+  width: 7.06666667rem;
+  margin: 0rem auto;
+}
+.modal .wrap .img-wrap img {
+  width: 100%;
+}
+.modal .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.2rem auto;
+  width: 7.06666667rem;
+}
+.modal .button-group .btn {
+  font-size: 16px;
+  display: inline-block;
+  color: #fff;
+  padding: 0.13333333rem 0.45333333rem;
+  border-radius: 0.48rem;
+}
+.modal .button-group .btn.green {
+  background-color: #44ce6f;
+}
+.modal .button-group .btn.orange {
+  background-color: #ff7a01;
+}
+#cas {
+  position: absolute;
+  z-index: 100;
+}
+#gameContainer {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 200;
+}
+.fail {
+  will-change: transfrom;
+  width: 4rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -2.29333333rem;
+  left: 100%;
+  z-index: 200;
+}
+.fail img {
+  width: 100%;
+}
+.fly {
+  -webkit-animation: fly linear 1200ms;
+          animation: fly linear 1200ms;
+}
+.bounce-in {
+  -webkit-animation: bounce-in ease-in-out 700ms;
+          animation: bounce-in ease-in-out 700ms;
+}
+@-webkit-keyframes fly {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+}
+@keyframes fly {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+}
+@-webkit-keyframes bounce-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+[data-dpr="1"] .choice {
+  font-size: 16px;
+}
+[data-dpr="1"] .choice span {
+  font-size: 22px;
+}
+[data-dpr="1"] .num-flag {
+  font-size: 16px !important;
+}
+[data-dpr="1"] #myCanvas p {
+  font-size: 25px;
+}
+[data-dpr="1"] .award-set {
+  font-size: 14px;
+}
+[data-dpr="1"] .button-group .btn {
+  font-size: 16px;
+}
+[data-dpr="2"] .choice {
+  font-size: 32px;
+}
+[data-dpr="2"] .choice span {
+  font-size: 44px;
+}
+[data-dpr="2"] .num-flag {
+  font-size: 32px !important;
+}
+[data-dpr="2"] #myCanvas p {
+  font-size: 50px;
+}
+[data-dpr="2"] .award-set {
+  font-size: 28px;
+}
+[data-dpr="2"] .button-group .btn {
+  font-size: 32px;
+}
+[data-dpr="3"] .choice {
+  font-size: 48px;
+}
+[data-dpr="3"] .choice span {
+  font-size: 66px;
+}
+[data-dpr="3"] .num-flag {
+  font-size: 48px !important;
+}
+[data-dpr="3"] #myCanvas p {
+  font-size: 75px;
+}
+[data-dpr="3"] .award-set {
+  font-size: 42px;
+}
+[data-dpr="3"] .button-group .btn {
+  font-size: 48px;
+}

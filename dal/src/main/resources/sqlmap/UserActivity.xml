@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+        "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap>
+   <typeAlias alias="UserActivity" type="com.taobao.lottery.dal.dataObject.KeyValue"/>
+
+    <resultMap id="UserActivityResultMap" class="UserActivity">
+        <result property="id" column="id" javaType="int" jdbcType="INT"/>
+        <result property="key" column="user_id" javaType="String" jdbcType="VARCHAR" nullValue="0"/>
+        <result property="value" column="activity_list" javaType="String" jdbcType="TEXT" nullValue="[]"/>
+        <result property="createTime" column="gmt_create" javaType="String" jdbcType="DATETIME" nullValue="0"/>
+        <result property="modifyTime" column="gmt_modified" javaType="String" jdbcType="DATETIME" nullValue="0"/>
+        <result property="status" column="status" javaType="int" jdbcType="INT" nullValue="1"/>
+    </resultMap>
+
+
+    <sql id="fields">
+        id, user_id, activity_list,gmt_create,gmt_modified,status
+    </sql>
+
+    <!--
+   - ===============================================
+   - 列出所有的数据
+   - ===============================================
+   -->
+    <select id="selectAllUserActivity" resultMap="UserActivityResultMap">
+        <![CDATA[
+        select
+                *
+        from
+                user_activity
+        where
+                status = 1
+        ]]>
+    </select>
+
+
+    <!-- 根据用户ID查询活动信息 -->
+    <select id="findById" parameterClass="java.lang.Integer" resultMap="UserActivityResultMap">
+        <![CDATA[
+        select
+                *
+        from
+                user_activity
+
+        where id = #id#
+        ]]>
+    </select>
+
+
+    <!-- 根据用户ID查询活动信息 -->
+    <select id="findByKey" parameterClass="java.lang.String" resultMap="UserActivityResultMap">
+        <![CDATA[
+        select
+                *
+        from
+                user_activity
+
+        where user_id = #userID#  and status = 1
+        ]]>
+    </select>
+
+    <insert id="insert" parameterClass="UserActivity">
+
+        <selectKey keyProperty="id" resultClass="int" type="pre">
+        <![CDATA[
+            select LAST_INSERT_ID() as value7
+            ]]>
+    </selectKey>
+        <![CDATA[
+        insert into user_activity(
+                    user_id,
+                    activity_list,
+                    gmt_create,
+                    gmt_modified,
+                    status
+        ) values(
+                    #key#,
+                    #value#,
+                    #createTime#,
+                    #modifyTime#,
+                    #status#
+                   )
+        ]]>
+
+        <!--INSERT into user_activity (user_id, activity_list,gmt_create,gmt_modified)
+        values (#key#,#value#,#createTime#,#modifyTime#);-->
+
+    </insert>
+
+
+    <!--根据ID删除标签
+    <delete id="deleteById" parameterClass="java.lang.Integer">
+        delete from user_activity where id = #id#
+    </delete>-->
+
+
+    <!-- 更新标签 -->
+    <update id="updateById" parameterClass="UserActivity">
+        update user_activity
+        <dynamic prepend=" set ">
+            <isNotNull property="key" prepend=" , ">
+                <![CDATA[
+                            user_id=#key#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="value" prepend=" , ">
+                <![CDATA[
+                            activity_list=#value#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="createTime" prepend=" , ">
+                <![CDATA[
+                            gmt_create=#createTime#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="modifyTime" prepend=" , ">
+                <![CDATA[
+                            gmt_modified=#modifyTime#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="status" prepend=" , ">
+                <![CDATA[
+                            status=#status#
+                        ]]>
+            </isNotNull>
+        </dynamic>
+        where id = #id#
+    </update>
+
+
+    <!-- 更新标签 -->
+    <update id="updateByKey" parameterClass="UserActivity">
+        update user_activity
+        <dynamic prepend=" set ">
+
+            <isNotNull property="value" prepend=" , ">
+                <![CDATA[
+                            activity_list=#value#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="createTime" prepend=" , ">
+                <![CDATA[
+                            gmt_create=#createTime#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="modifyTime" prepend=" , ">
+                <![CDATA[
+                            gmt_modified=#modifyTime#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="status" prepend=" , ">
+                <![CDATA[
+                            status=#status#
+                        ]]>
+            </isNotNull>
+        </dynamic>
+        where user_id = #key#
+    </update>
+
+
+</sqlMap>

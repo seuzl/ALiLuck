@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans default-autowire="byName"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:p="http://www.springframework.org/schema/p"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd ">
+
+    <!--验证链的配置文件-->
+    <beans:import resource="verity-chain.xml"/>
+    <beans:import resource="chain-ao.xml"/>
+
+</beans:beans>

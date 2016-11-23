@@ -1,0 +1,7 @@
+body {
+  font-size: 18px;
+}
+body .content {
+  width: 1200px;
+  margin: 0 auto;
+}

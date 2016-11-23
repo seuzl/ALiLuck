@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+        "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap>
+    <typeAlias alias="ActivityInfo" type="com.taobao.lottery.dal.dataObject.ActivityInfo"/>
+    <resultMap id="ActivityInfoResultMap" class="ActivityInfo">
+        <result property="activityId" column="id" javaType="Integer" jdbcType="INT"/>
+        <result property="activityType" column="type_id" javaType="Integer" jdbcType="INT" nullValue="0"/>
+        <result property="title" column="title" javaType="String" jdbcType="VARCHAR" nullValue="0" />
+        <result property="startTime" column="starttime" javaType="String" jdbcType="DATETIME" nullValue="0"/>
+        <result property="endTime" column="endtime" javaType="String" jdbcType="DATETIME" nullValue="0"/>
+        <result property="participants" column="participants" javaType="Object" jdbcType="TEXT" nullValue="[]"/>
+        <result property="createTime" column="gmt_create" javaType="String" jdbcType="DATETIME" nullValue="0"/>
+        <result property="modifyTime" column="gmt_modified" javaType="String" jdbcType="DATETIME" nullValue="0"/>
+        <result property="logicStatus" column="status" javaType="Integer" jdbcType="INT" nullValue="1" />
+        <result property="longitude" column="longitude" javaType="Double" jdbcType="DECIMAL" nullValue="0.0"/>
+        <result property="latitude" column="latitude" javaType="Double" jdbcType="DECIMAL" nullValue="0.0"/>
+        <result property="limit" column="limit_range" javaType="Double" jdbcType="DECIMAL" nullValue="0.0"/>
+        <result property="creatorId" column="user_id" javaType="String" jdbcType="VARCHAR" nullValue="0"/>
+        <result property="prize" column="price_category" javaType="Object" jdbcType="TEXT" nullValue="[]"/>
+        <result property="creatorName" column="user_name" javaType="String" jdbcType="VARCHAR" nullValue="0"/>
+        <result property="location" column="location" javaType="String" jdbcType="VARCHAR" nullValue="0"/>
+    </resultMap>
+
+    <!--
+          - ===============================================
+          - 列出所有的活动
+          - ===============================================
+         -->
+    <select id="selectAllActivities"  resultMap="ActivityInfoResultMap">
+        <![CDATA[
+        select
+                *
+
+        from
+                activity_info
+        where
+                status = 1
+        ]]>
+    </select>
+
+    <!--
+         - ===============================================
+         - 根据活动id选择活动
+         - ===============================================
+        -->
+    <select id="selectActivityById"  resultMap="ActivityInfoResultMap" parameterClass="int">
+        <![CDATA[
+        select
+                *
+        from
+                activity_info
+        where
+                id = #activityId# and status = 1
+        ]]>
+    </select>
+
+    <!--
+          - ===============================================
+          - 根据活动id查询所有参与者
+          - ===============================================
+         -->
+    <select id="selectGroupById"  resultClass="String" parameterClass="int">
+        <![CDATA[
+        select
+                participants
+
+        from
+                activity_info
+        where
+                id = #activityId# and status = 1
+        ]]>
+    </select>
+
+    <!--
+          - ===============================================
+          - 根据创建者Id查询他发起的所有活动
+          - ===============================================
+         -->
+    <select id="selectActivitiesByCreatorId"  resultMap="ActivityInfoResultMap" parameterClass="String">
+        <![CDATA[
+        select
+                *
+
+        from
+                activity_info
+        where
+                user_id = #creatorId# and status = 1
+        ]]>
+    </select>
+
+    <!--
+         - ===============================================
+         - 根据title来返回活动id
+         - ===============================================
+        -->
+    <select id="selectActivityIdByTitle"  resultClass="int" parameterClass="String">
+        <![CDATA[
+        select
+                id
+
+        from
+                activity_info
+        where
+                title=#title# and status = 1
+        ]]>
+    </select>
+
+
+
+    <!--
+    - ===================================================
+    - 更改一个活动
+    - ===================================================
+    -->
+    <update id="updateActivity" parameterClass="ActivityInfo">
+
+        update
+                activity_info
+
+        <dynamic prepend=" set ">
+            <isNotNull property="activityType" prepend=" , ">
+                <![CDATA[
+                            type_id = #activityType#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="title" prepend=" , ">
+                <![CDATA[
+                            title = #title#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="createTime" prepend=" , ">
+                <![CDATA[
+                            gmt_create=#createTime#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="modifyTime" prepend=" , ">
+                <![CDATA[
+                            gmt_modified=#modifyTime#
+                        ]]>
+            </isNotNull>
+
+
+            <isNotNull property="startTime" prepend=" , ">
+                <![CDATA[
+                            starttime       = #startTime#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="endTime" prepend=" , ">
+                <![CDATA[
+                            endtime     = #endTime#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="participants" prepend=" , ">
+                <![CDATA[
+                            participants      = #participants#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="logicStatus" prepend=" , ">
+                <![CDATA[
+                            status         = #logicStatus#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="longitude" prepend=" , ">
+                <![CDATA[
+                            longitude      = #longitude#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="latitude" prepend=" , ">
+                <![CDATA[
+                             latitude       = #latitude#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="limit" prepend=" , ">
+                <![CDATA[
+                            limit_range    = #limit#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="creatorId" prepend=" , ">
+                <![CDATA[
+                            user_id        = #creatorId#
+                        ]]>
+            </isNotNull>
+            <isNotNull property="prize" prepend=" , ">
+                <![CDATA[
+                            price_category = #prize#
+                        ]]>
+            </isNotNull>
+
+        </dynamic>
+
+        where
+                id     = #activityId#
+
+    </update>
+
+
+
+    <!-- - ===============================================
+    - 插入一条活动,自增ID
+    - ===============================================-->
+    <insert id="insertActivity" parameterClass="ActivityInfo">
+
+        <![CDATA[
+        insert into activity_info(
+                    type_id,
+                    title,
+                    starttime,
+                    endtime,
+                    participants,
+                    gmt_create,
+                    gmt_modified,
+                    status,
+                    longitude,
+                    latitude,
+                    limit_range,
+                    user_id,
+                    price_category,
+                    user_name,
+                    location
+
+        ) values(
+                    #activityType#,
+                    #title#,
+                    #startTime#,
+                    #endTime#,
+                    #participants#,
+                    #createTime#,
+                    #modifyTime#,
+                    #logicStatus#,
+                    #longitude#,
+                    #latitude#,
+                    #limit#,
+                    #creatorId#,
+                    #prize#,
+                    #creatorName#,
+                    #location#
+                   )
+        ]]>
+
+        <selectKey keyProperty="activityId" resultClass="int">
+            <![CDATA[
+            select LAST_INSERT_ID() as activityId
+            ]]>
+        </selectKey>
+    </insert>
+
+
+
+
+</sqlMap>

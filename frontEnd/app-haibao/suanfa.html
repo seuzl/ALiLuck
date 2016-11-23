@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+    <div id="main" style="width: 2000px;height:400px;"></div>
+    <script>
+        /**
+         * 时间片分割算法
+         */
+        Date.prototype.Format = function (fmt) {
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+
+        var myChart = echarts.init(document.getElementById('main'));
+
+        var firstPool = [];
+        var newPool = [];
+        var i = 0;
+
+        var Util = {
+            getRandom: function(len) {
+                return Math.floor(Math.random() * len);
+            }
+        }
+
+        //生成测试数据
+
+        for(var count = 0; count < 2; count++) {
+            firstPool[i] = {
+                id: i++,
+                name: "一等奖",
+                lastTime: 0
+            }
+        }
+        for(var count = 0; count < 5; count++) {
+            firstPool[i] = {
+                id: i++,
+                name: "二等奖",
+                lastTime: 0
+            }
+        }
+        for(var count = 0; count < 10; count++) {
+            firstPool[i] = {
+                id: i++,
+                name: "三等奖",
+                lastTime: 0
+            }
+        }
+
+        //30s前， 30s后
+        var startTime = + new Date();
+        var endTime = + new Date(startTime  + 1000 * 5);
+
+        var firstCount = firstPool.length;
+        //--------------
+        var detaTime = (endTime - startTime) / firstCount;        //总区间
+
+        for(var i = 0; i < firstCount; i++) {
+            var key = Math.floor(Util.getRandom(firstPool.length));   //键值
+            var curAward = firstPool[key];
+            firstPool.splice(key, 1);                            //删除内容
+            var insTime = Util.getRandom(detaTime);
+            var newObj = {
+                id: curAward.id,
+                name: curAward.name,
+                lastTime: new Date(startTime + i * detaTime + insTime).Format("hh:mm:ss")
+            };
+            newPool.push(newObj)
+        }
+
+        var xArr = [];
+        var yArr = [];
+        console.warn("开始时间" + new Date(startTime));
+
+        for(var i = 0; i < newPool.length ;i++) {
+            console.log("当前奖项：" + newPool[i].name);
+            console.log("当前时间" + newPool[i].lastTime);
+            console.log("\n\n");
+            xArr.push(newPool[i].lastTime);
+            switch(newPool[i].name) {
+                case "一等奖":
+                    yArr.push(0);
+                    break;
+                case "二等奖":
+                    yArr.push(1);
+                    break;
+                case "三等奖":
+                    yArr.push(2)
+                    break;
+            }
+        }
+        console.warn("结束时间" + new Date(endTime));
+
+
+
+
+
+        var option = {
+            title: {
+                text: '30s抽奖分配结果',
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['中奖位置']
+            },
+            xAxis:  {
+                data: xArr
+            },
+            yAxis: {
+                data: ["一等奖", "二等奖", "三等奖"]
+            },
+            series: [
+                {
+                    name:'最高气温',
+                    type:'point',
+                    data: yArr
+                }
+            ]
+        };
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

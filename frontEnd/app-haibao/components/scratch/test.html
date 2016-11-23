@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <link rel="stylesheet" href="/components/style/reset.css">
+    <link rel="stylesheet" href="/components/style/scratch/scratch.css">
+    <script src="/components/js/flexible.js"></script>
+    <script src="/components/scratch/scrape.js"></script>
+    <style>
+        .loading {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            z-index: 200;
+            background-color: #98bff6;
+            -webkit-transition: opacity 500ms;
+            transition: opacity 500ms;
+        }
+        .loading .la-square-jelly-box {
+            width: 1.33333333rem;
+            height: 1.33333333rem;
+            display: block;
+            font-size: 0;
+            color: #fff;
+            position: relative;
+        }
+        .loading .la-square-jelly-box div {
+            display: inline-block;
+            will-change: transform;
+        }
+        .loading .la-square-jelly-box .box {
+            position: absolute;
+            top: -25%;
+            z-index: 1;
+            height: 100%;
+            border-radius: 10%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            -webkit-animation: square-jelly-box-animate 0.6s -0.1s linear infinite;
+            animation: square-jelly-box-animate 0.6s -0.1s linear infinite;
+        }
+        .loading .la-square-jelly-box .shadow {
+            bottom: -9%;
+            height: 10%;
+            background: #000;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0.2;
+            left: 0;
+            width: 100%;
+            -webkit-animation: square-jelly-box-shadow 0.6s -0.1s linear infinite;
+            animation: square-jelly-box-shadow 0.6s -0.1s linear infinite;
+        }
+        @-webkit-keyframes square-jelly-box-shadow {
+            50% {
+                -webkit-transform: scale(1.25, 1);
+                transform: scale(1.25, 1);
+            }
+        }
+        @keyframes square-jelly-box-shadow {
+            50% {
+                -webkit-transform: scale(1.25, 1);
+                transform: scale(1.25, 1);
+            }
+        }
+        @-webkit-keyframes square-jelly-box-animate {
+            17% {
+                border-bottom-right-radius: 10%;
+            }
+            25% {
+                -webkit-transform: translateY(25%) rotate(22.5deg);
+                transform: translateY(25%) rotate(22.5deg);
+            }
+            50% {
+                border-bottom-right-radius: 100%;
+                -webkit-transform: translateY(25%) rotate(22.5deg);
+                transform: translateY(25%) rotate(22.5deg);
+            }
+            75% {
+                -webkit-transform: translateY(25%) rotate(67.5deg);
+                transform: translateY(25%) rotate(67.5deg);
+            }
+            100% {
+                -webkit-transform: translateY(0) rotate(90deg);
+                transform: translateY(0) rotate(90deg);
+            }
+        }
+        @keyframes square-jelly-box-animate {
+            17% {
+                border-bottom-right-radius: 10%;
+            }
+            25% {
+                -webkit-transform: translateY(25%) rotate(22.5deg);
+                transform: translateY(25%) rotate(22.5deg);
+            }
+            50% {
+                border-bottom-right-radius: 100%;
+                -webkit-transform: translateY(25%) rotate(22.5deg);
+                transform: translateY(25%) rotate(22.5deg);
+            }
+            75% {
+                -webkit-transform: translateY(25%) rotate(67.5deg);
+                transform: translateY(25%) rotate(67.5deg);
+            }
+            100% {
+                -webkit-transform: translateY(0) rotate(90deg);
+                transform: translateY(0) rotate(90deg);
+            }
+        }
+    </style>
+</head>
+
+<body data-version="css_scratch@1.0;js_hilo@1.0;js_scrape@1.0;js_guagua@1.0">
+<div class="loading" id="load">
+    <div class="la-square-jelly-box">
+        <div class="box"></div>
+        <div class="shadow"></div>
+    </div>
+</div>
+
+
+<div id="gameContainer">
+    <img src="/source/scratch/fire.png" alt="" id="texture" style="display: none;">
+</div>
+<div class="header-img">
+    <img src="/source/scratch/head-img.png" alt="">
+</div>
+<div class="scratch-wrap">
+    <div id="myCanvas"></div>
+</div>
+<div class="choice">
+    您总共有<span>1</span>次机会
+</div>
+<div class="banner">
+    <img src="/source/scratch/banner.png" alt="">
+</div>
+<div class="award-wrap">
+    <div class="award-items">
+        <div class="item">
+            <div class="num-flag second">2</div>
+            <img src="/source/scratch/listSide.png" alt="">
+            <div class="per">
+                暂无
+            </div>
+        </div>
+        <div class="item">
+            <div class="num-flag first">1</div>
+            <img src="/source/scratch/listMain.png" alt="">
+            <div class="per center">
+                暂无
+            </div>
+        </div>
+        <div class="item">
+            <div class="num-flag third">3</div>
+            <img src="/source/scratch/listSide.png" alt="">
+            <div class="per">
+                暂无
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/hilo.js"></script>
+<script src="/test/guagua.js"></script>
+<script>
+    var eleLoad = document.getElementById("load");
+    eleLoad.style.opacity = 0;
+    setTimeout(function() {
+        eleLoad.style.display = "none";
+    }, 500)
+</script>
+</body>
+</html>

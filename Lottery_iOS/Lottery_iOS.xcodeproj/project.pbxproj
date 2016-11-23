@@ -1,0 +1,815 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		352562231D61AF3900691AFF /* ConnectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 352562221D61AF3900691AFF /* ConnectManager.m */; };
+		3525627B1D62F6C900691AFF /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3525627A1D62F6C900691AFF /* RSA.m */; };
+		354A85A51D5983CF0005B7E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A85A41D5983CF0005B7E6 /* main.m */; };
+		354A85A81D5983CF0005B7E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A85A71D5983CF0005B7E6 /* AppDelegate.m */; };
+		354A85AE1D5983CF0005B7E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354A85AC1D5983CF0005B7E6 /* Main.storyboard */; };
+		354A85B01D5983CF0005B7E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 354A85AF1D5983CF0005B7E6 /* Assets.xcassets */; };
+		354A85B31D5983CF0005B7E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 354A85B11D5983CF0005B7E6 /* LaunchScreen.storyboard */; };
+		354A85BE1D5983CF0005B7E6 /* Lottery_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A85BD1D5983CF0005B7E6 /* Lottery_iOSTests.m */; };
+		354A85C91D5983CF0005B7E6 /* Lottery_iOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A85C81D5983CF0005B7E6 /* Lottery_iOSUITests.m */; };
+		354A85E01D5A1D100005B7E6 /* CALayer+BorderUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A85DF1D5A1D100005B7E6 /* CALayer+BorderUIColor.m */; };
+		354A85E71D5A1F310005B7E6 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A85E61D5A1F310005B7E6 /* Config.m */; };
+		354A85EA1D5A24140005B7E6 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A85E91D5A24140005B7E6 /* LoginVC.m */; };
+		354A862C1D5B3ED00005B7E6 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A862B1D5B3ED00005B7E6 /* HomeVC.m */; };
+		354A862F1D5B5BB30005B7E6 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A862E1D5B5BB30005B7E6 /* HomeCell.m */; };
+		354A86341D5B6B510005B7E6 /* SubLBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86331D5B6B510005B7E6 /* SubLBXScanViewController.m */; };
+		354A86361D5B6CFB0005B7E6 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 354A86351D5B6CFB0005B7E6 /* CodeScan.bundle */; };
+		354A863C1D5B6F810005B7E6 /* GameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A863B1D5B6F810005B7E6 /* GameVC.m */; };
+		354A863F1D5B91ED0005B7E6 /* GameSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A863E1D5B91ED0005B7E6 /* GameSettingVC.m */; };
+		354A86421D5B99CC0005B7E6 /* CellWithTwoLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86411D5B99CC0005B7E6 /* CellWithTwoLabels.m */; };
+		354A86451D5B99E90005B7E6 /* CellWithLabelAndTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86441D5B99E90005B7E6 /* CellWithLabelAndTextField.m */; };
+		354A86481D5B99FB0005B7E6 /* CellWithLabelAndBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86471D5B99FB0005B7E6 /* CellWithLabelAndBtn.m */; };
+		354A864B1D5B9A1E0005B7E6 /* CellWithTwoTextFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A864A1D5B9A1E0005B7E6 /* CellWithTwoTextFields.m */; };
+		354A864E1D5C00E90005B7E6 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A864D1D5C00E90005B7E6 /* Activity.m */; };
+		354A86511D5C025B0005B7E6 /* PriceCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86501D5C025B0005B7E6 /* PriceCategory.m */; };
+		354A86551D5C19DD0005B7E6 /* XMRTimePiker.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86541D5C19DD0005B7E6 /* XMRTimePiker.m */; };
+		354A86581D5C5EFF0005B7E6 /* InviteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86571D5C5EFF0005B7E6 /* InviteVC.m */; };
+		354A865B1D5C679F0005B7E6 /* CellWithImgAndIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A865A1D5C679F0005B7E6 /* CellWithImgAndIndicator.m */; };
+		354A865E1D5C67BF0005B7E6 /* InviteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A865D1D5C67BF0005B7E6 /* InviteCell.m */; };
+		354A86611D5C6B210005B7E6 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86601D5C6B210005B7E6 /* Person.m */; };
+		354A86631D5C82390005B7E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354A86621D5C82390005B7E6 /* CoreLocation.framework */; };
+		354A86691D5C98A80005B7E6 /* QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86681D5C98A80005B7E6 /* QRCodeVC.m */; };
+		354A866F1D5C9E520005B7E6 /* GameResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A866E1D5C9E520005B7E6 /* GameResultVC.m */; };
+		354A86721D5CA2280005B7E6 /* GameStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86711D5CA2280005B7E6 /* GameStatusCell.m */; };
+		354A86751D5CA2370005B7E6 /* GameResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 354A86741D5CA2370005B7E6 /* GameResultCell.m */; };
+		356C29E01D6055490077EB05 /* Activity+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 356C29DF1D6055490077EB05 /* Activity+Request.m */; };
+		356C29E51D6162950077EB05 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356C29E41D6162950077EB05 /* MultipeerConnectivity.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		354A85BA1D5983CF0005B7E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 354A85981D5983CF0005B7E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 354A859F1D5983CF0005B7E6;
+			remoteInfo = Lottery_iOS;
+		};
+		354A85C51D5983CF0005B7E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 354A85981D5983CF0005B7E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 354A859F1D5983CF0005B7E6;
+			remoteInfo = Lottery_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		352562211D61AF3900691AFF /* ConnectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectManager.h; sourceTree = "<group>"; };
+		352562221D61AF3900691AFF /* ConnectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectManager.m; sourceTree = "<group>"; };
+		352562791D62F6C900691AFF /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		3525627A1D62F6C900691AFF /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		354A85A01D5983CF0005B7E6 /* Lottery_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottery_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		354A85A41D5983CF0005B7E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		354A85A61D5983CF0005B7E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		354A85A71D5983CF0005B7E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		354A85AD1D5983CF0005B7E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		354A85AF1D5983CF0005B7E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		354A85B21D5983CF0005B7E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		354A85B41D5983CF0005B7E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		354A85B91D5983CF0005B7E6 /* Lottery_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lottery_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		354A85BD1D5983CF0005B7E6 /* Lottery_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lottery_iOSTests.m; sourceTree = "<group>"; };
+		354A85BF1D5983CF0005B7E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		354A85C41D5983CF0005B7E6 /* Lottery_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lottery_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		354A85C81D5983CF0005B7E6 /* Lottery_iOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lottery_iOSUITests.m; sourceTree = "<group>"; };
+		354A85CA1D5983CF0005B7E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		354A85DE1D5A1D100005B7E6 /* CALayer+BorderUIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+BorderUIColor.h"; sourceTree = "<group>"; };
+		354A85DF1D5A1D100005B7E6 /* CALayer+BorderUIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+BorderUIColor.m"; sourceTree = "<group>"; };
+		354A85E51D5A1F310005B7E6 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		354A85E61D5A1F310005B7E6 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		354A85E81D5A24140005B7E6 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		354A85E91D5A24140005B7E6 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		354A862A1D5B3ED00005B7E6 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		354A862B1D5B3ED00005B7E6 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		354A862D1D5B5BB30005B7E6 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		354A862E1D5B5BB30005B7E6 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		354A86321D5B6B510005B7E6 /* SubLBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLBXScanViewController.h; sourceTree = "<group>"; };
+		354A86331D5B6B510005B7E6 /* SubLBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubLBXScanViewController.m; sourceTree = "<group>"; };
+		354A86351D5B6CFB0005B7E6 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		354A863A1D5B6F810005B7E6 /* GameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameVC.h; sourceTree = "<group>"; };
+		354A863B1D5B6F810005B7E6 /* GameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameVC.m; sourceTree = "<group>"; };
+		354A863D1D5B91ED0005B7E6 /* GameSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSettingVC.h; sourceTree = "<group>"; };
+		354A863E1D5B91ED0005B7E6 /* GameSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSettingVC.m; sourceTree = "<group>"; };
+		354A86401D5B99CC0005B7E6 /* CellWithTwoLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithTwoLabels.h; sourceTree = "<group>"; };
+		354A86411D5B99CC0005B7E6 /* CellWithTwoLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithTwoLabels.m; sourceTree = "<group>"; };
+		354A86431D5B99E90005B7E6 /* CellWithLabelAndTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithLabelAndTextField.h; sourceTree = "<group>"; };
+		354A86441D5B99E90005B7E6 /* CellWithLabelAndTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithLabelAndTextField.m; sourceTree = "<group>"; };
+		354A86461D5B99FB0005B7E6 /* CellWithLabelAndBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithLabelAndBtn.h; sourceTree = "<group>"; };
+		354A86471D5B99FB0005B7E6 /* CellWithLabelAndBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithLabelAndBtn.m; sourceTree = "<group>"; };
+		354A86491D5B9A1E0005B7E6 /* CellWithTwoTextFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithTwoTextFields.h; sourceTree = "<group>"; };
+		354A864A1D5B9A1E0005B7E6 /* CellWithTwoTextFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithTwoTextFields.m; sourceTree = "<group>"; };
+		354A864C1D5C00E90005B7E6 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		354A864D1D5C00E90005B7E6 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		354A864F1D5C025B0005B7E6 /* PriceCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceCategory.h; sourceTree = "<group>"; };
+		354A86501D5C025B0005B7E6 /* PriceCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceCategory.m; sourceTree = "<group>"; };
+		354A86531D5C19DD0005B7E6 /* XMRTimePiker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMRTimePiker.h; sourceTree = "<group>"; };
+		354A86541D5C19DD0005B7E6 /* XMRTimePiker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMRTimePiker.m; sourceTree = "<group>"; };
+		354A86561D5C5EFF0005B7E6 /* InviteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteVC.h; sourceTree = "<group>"; };
+		354A86571D5C5EFF0005B7E6 /* InviteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteVC.m; sourceTree = "<group>"; };
+		354A86591D5C679F0005B7E6 /* CellWithImgAndIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithImgAndIndicator.h; sourceTree = "<group>"; };
+		354A865A1D5C679F0005B7E6 /* CellWithImgAndIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithImgAndIndicator.m; sourceTree = "<group>"; };
+		354A865C1D5C67BF0005B7E6 /* InviteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteCell.h; sourceTree = "<group>"; };
+		354A865D1D5C67BF0005B7E6 /* InviteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteCell.m; sourceTree = "<group>"; };
+		354A865F1D5C6B210005B7E6 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		354A86601D5C6B210005B7E6 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		354A86621D5C82390005B7E6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		354A86671D5C98A80005B7E6 /* QRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeVC.h; sourceTree = "<group>"; };
+		354A86681D5C98A80005B7E6 /* QRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeVC.m; sourceTree = "<group>"; };
+		354A866D1D5C9E520005B7E6 /* GameResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultVC.h; sourceTree = "<group>"; };
+		354A866E1D5C9E520005B7E6 /* GameResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultVC.m; sourceTree = "<group>"; };
+		354A86701D5CA2280005B7E6 /* GameStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStatusCell.h; sourceTree = "<group>"; };
+		354A86711D5CA2280005B7E6 /* GameStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStatusCell.m; sourceTree = "<group>"; };
+		354A86731D5CA2370005B7E6 /* GameResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameResultCell.h; sourceTree = "<group>"; };
+		354A86741D5CA2370005B7E6 /* GameResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameResultCell.m; sourceTree = "<group>"; };
+		356C29DE1D6055490077EB05 /* Activity+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Activity+Request.h"; sourceTree = "<group>"; };
+		356C29DF1D6055490077EB05 /* Activity+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Activity+Request.m"; sourceTree = "<group>"; };
+		356C29E41D6162950077EB05 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		354A859D1D5983CF0005B7E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356C29E51D6162950077EB05 /* MultipeerConnectivity.framework in Frameworks */,
+				354A86631D5C82390005B7E6 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		354A85B61D5983CF0005B7E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		354A85C11D5983CF0005B7E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		354A85971D5983CF0005B7E6 = {
+			isa = PBXGroup;
+			children = (
+				354A85A21D5983CF0005B7E6 /* Lottery_iOS */,
+				354A85BC1D5983CF0005B7E6 /* Lottery_iOSTests */,
+				354A85C71D5983CF0005B7E6 /* Lottery_iOSUITests */,
+				354A85A11D5983CF0005B7E6 /* Products */,
+				5DFB76AA8FB78B2143D081DF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		354A85A11D5983CF0005B7E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				354A85A01D5983CF0005B7E6 /* Lottery_iOS.app */,
+				354A85B91D5983CF0005B7E6 /* Lottery_iOSTests.xctest */,
+				354A85C41D5983CF0005B7E6 /* Lottery_iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		354A85A21D5983CF0005B7E6 /* Lottery_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				354A85E11D5A1D190005B7E6 /* Vender */,
+				354A85DD1D5A1CDF0005B7E6 /* Delegate */,
+				354A85DC1D5A1CD50005B7E6 /* Category */,
+				354A85DB1D5A1CC70005B7E6 /* Util */,
+				354A85DA1D5A1CC30005B7E6 /* Controller */,
+				354A85D91D5A1CBC0005B7E6 /* View */,
+				354A85D81D5A1CB80005B7E6 /* Model */,
+				354A85D71D5A1CB00005B7E6 /* Resource */,
+				354A85D61D5A1C530005B7E6 /* Request */,
+				354A85AC1D5983CF0005B7E6 /* Main.storyboard */,
+				354A85AF1D5983CF0005B7E6 /* Assets.xcassets */,
+				354A85B11D5983CF0005B7E6 /* LaunchScreen.storyboard */,
+				354A85B41D5983CF0005B7E6 /* Info.plist */,
+				354A85A31D5983CF0005B7E6 /* Supporting Files */,
+			);
+			path = Lottery_iOS;
+			sourceTree = "<group>";
+		};
+		354A85A31D5983CF0005B7E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				354A85A41D5983CF0005B7E6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		354A85BC1D5983CF0005B7E6 /* Lottery_iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				354A85BD1D5983CF0005B7E6 /* Lottery_iOSTests.m */,
+				354A85BF1D5983CF0005B7E6 /* Info.plist */,
+			);
+			path = Lottery_iOSTests;
+			sourceTree = "<group>";
+		};
+		354A85C71D5983CF0005B7E6 /* Lottery_iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				354A85C81D5983CF0005B7E6 /* Lottery_iOSUITests.m */,
+				354A85CA1D5983CF0005B7E6 /* Info.plist */,
+			);
+			path = Lottery_iOSUITests;
+			sourceTree = "<group>";
+		};
+		354A85D61D5A1C530005B7E6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				356C29DE1D6055490077EB05 /* Activity+Request.h */,
+				356C29DF1D6055490077EB05 /* Activity+Request.m */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		354A85D71D5A1CB00005B7E6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				354A86351D5B6CFB0005B7E6 /* CodeScan.bundle */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		354A85D81D5A1CB80005B7E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				354A864C1D5C00E90005B7E6 /* Activity.h */,
+				354A864D1D5C00E90005B7E6 /* Activity.m */,
+				354A864F1D5C025B0005B7E6 /* PriceCategory.h */,
+				354A86501D5C025B0005B7E6 /* PriceCategory.m */,
+				354A865F1D5C6B210005B7E6 /* Person.h */,
+				354A86601D5C6B210005B7E6 /* Person.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		354A85D91D5A1CBC0005B7E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				354A862D1D5B5BB30005B7E6 /* HomeCell.h */,
+				354A862E1D5B5BB30005B7E6 /* HomeCell.m */,
+				354A86401D5B99CC0005B7E6 /* CellWithTwoLabels.h */,
+				354A86411D5B99CC0005B7E6 /* CellWithTwoLabels.m */,
+				354A86431D5B99E90005B7E6 /* CellWithLabelAndTextField.h */,
+				354A86441D5B99E90005B7E6 /* CellWithLabelAndTextField.m */,
+				354A86461D5B99FB0005B7E6 /* CellWithLabelAndBtn.h */,
+				354A86471D5B99FB0005B7E6 /* CellWithLabelAndBtn.m */,
+				354A86491D5B9A1E0005B7E6 /* CellWithTwoTextFields.h */,
+				354A864A1D5B9A1E0005B7E6 /* CellWithTwoTextFields.m */,
+				354A86591D5C679F0005B7E6 /* CellWithImgAndIndicator.h */,
+				354A865A1D5C679F0005B7E6 /* CellWithImgAndIndicator.m */,
+				354A865C1D5C67BF0005B7E6 /* InviteCell.h */,
+				354A865D1D5C67BF0005B7E6 /* InviteCell.m */,
+				354A86701D5CA2280005B7E6 /* GameStatusCell.h */,
+				354A86711D5CA2280005B7E6 /* GameStatusCell.m */,
+				354A86731D5CA2370005B7E6 /* GameResultCell.h */,
+				354A86741D5CA2370005B7E6 /* GameResultCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		354A85DA1D5A1CC30005B7E6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				354A86311D5B6B2E0005B7E6 /* sendLottery */,
+				354A86301D5B6B230005B7E6 /* askLottery */,
+				354A85E81D5A24140005B7E6 /* LoginVC.h */,
+				354A85E91D5A24140005B7E6 /* LoginVC.m */,
+				354A862A1D5B3ED00005B7E6 /* HomeVC.h */,
+				354A862B1D5B3ED00005B7E6 /* HomeVC.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		354A85DB1D5A1CC70005B7E6 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				354A85E51D5A1F310005B7E6 /* Config.h */,
+				354A85E61D5A1F310005B7E6 /* Config.m */,
+				352562211D61AF3900691AFF /* ConnectManager.h */,
+				352562221D61AF3900691AFF /* ConnectManager.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		354A85DC1D5A1CD50005B7E6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				354A85DE1D5A1D100005B7E6 /* CALayer+BorderUIColor.h */,
+				354A85DF1D5A1D100005B7E6 /* CALayer+BorderUIColor.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		354A85DD1D5A1CDF0005B7E6 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				354A85A61D5983CF0005B7E6 /* AppDelegate.h */,
+				354A85A71D5983CF0005B7E6 /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		354A85E11D5A1D190005B7E6 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				352562791D62F6C900691AFF /* RSA.h */,
+				3525627A1D62F6C900691AFF /* RSA.m */,
+				354A86521D5C19D10005B7E6 /* XMRTimePiker */,
+			);
+			name = Vender;
+			sourceTree = "<group>";
+		};
+		354A86301D5B6B230005B7E6 /* askLottery */ = {
+			isa = PBXGroup;
+			children = (
+				354A86321D5B6B510005B7E6 /* SubLBXScanViewController.h */,
+				354A86331D5B6B510005B7E6 /* SubLBXScanViewController.m */,
+				354A863A1D5B6F810005B7E6 /* GameVC.h */,
+				354A863B1D5B6F810005B7E6 /* GameVC.m */,
+			);
+			name = askLottery;
+			sourceTree = "<group>";
+		};
+		354A86311D5B6B2E0005B7E6 /* sendLottery */ = {
+			isa = PBXGroup;
+			children = (
+				354A863D1D5B91ED0005B7E6 /* GameSettingVC.h */,
+				354A863E1D5B91ED0005B7E6 /* GameSettingVC.m */,
+				354A86561D5C5EFF0005B7E6 /* InviteVC.h */,
+				354A86571D5C5EFF0005B7E6 /* InviteVC.m */,
+				354A86671D5C98A80005B7E6 /* QRCodeVC.h */,
+				354A86681D5C98A80005B7E6 /* QRCodeVC.m */,
+				354A866D1D5C9E520005B7E6 /* GameResultVC.h */,
+				354A866E1D5C9E520005B7E6 /* GameResultVC.m */,
+			);
+			name = sendLottery;
+			sourceTree = "<group>";
+		};
+		354A86521D5C19D10005B7E6 /* XMRTimePiker */ = {
+			isa = PBXGroup;
+			children = (
+				354A86531D5C19DD0005B7E6 /* XMRTimePiker.h */,
+				354A86541D5C19DD0005B7E6 /* XMRTimePiker.m */,
+			);
+			name = XMRTimePiker;
+			sourceTree = "<group>";
+		};
+		5DFB76AA8FB78B2143D081DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				356C29E41D6162950077EB05 /* MultipeerConnectivity.framework */,
+				354A86621D5C82390005B7E6 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		354A859F1D5983CF0005B7E6 /* Lottery_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 354A85CD1D5983CF0005B7E6 /* Build configuration list for PBXNativeTarget "Lottery_iOS" */;
+			buildPhases = (
+				354A859C1D5983CF0005B7E6 /* Sources */,
+				354A859D1D5983CF0005B7E6 /* Frameworks */,
+				354A859E1D5983CF0005B7E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lottery_iOS;
+			productName = Lottery_iOS;
+			productReference = 354A85A01D5983CF0005B7E6 /* Lottery_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		354A85B81D5983CF0005B7E6 /* Lottery_iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 354A85D01D5983CF0005B7E6 /* Build configuration list for PBXNativeTarget "Lottery_iOSTests" */;
+			buildPhases = (
+				354A85B51D5983CF0005B7E6 /* Sources */,
+				354A85B61D5983CF0005B7E6 /* Frameworks */,
+				354A85B71D5983CF0005B7E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				354A85BB1D5983CF0005B7E6 /* PBXTargetDependency */,
+			);
+			name = Lottery_iOSTests;
+			productName = Lottery_iOSTests;
+			productReference = 354A85B91D5983CF0005B7E6 /* Lottery_iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		354A85C31D5983CF0005B7E6 /* Lottery_iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 354A85D31D5983CF0005B7E6 /* Build configuration list for PBXNativeTarget "Lottery_iOSUITests" */;
+			buildPhases = (
+				354A85C01D5983CF0005B7E6 /* Sources */,
+				354A85C11D5983CF0005B7E6 /* Frameworks */,
+				354A85C21D5983CF0005B7E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				354A85C61D5983CF0005B7E6 /* PBXTargetDependency */,
+			);
+			name = Lottery_iOSUITests;
+			productName = Lottery_iOSUITests;
+			productReference = 354A85C41D5983CF0005B7E6 /* Lottery_iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		354A85981D5983CF0005B7E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "赵磊";
+				TargetAttributes = {
+					354A859F1D5983CF0005B7E6 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = K6S552898A;
+					};
+					354A85B81D5983CF0005B7E6 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 354A859F1D5983CF0005B7E6;
+					};
+					354A85C31D5983CF0005B7E6 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 354A859F1D5983CF0005B7E6;
+					};
+				};
+			};
+			buildConfigurationList = 354A859B1D5983CF0005B7E6 /* Build configuration list for PBXProject "Lottery_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 354A85971D5983CF0005B7E6;
+			productRefGroup = 354A85A11D5983CF0005B7E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				354A859F1D5983CF0005B7E6 /* Lottery_iOS */,
+				354A85B81D5983CF0005B7E6 /* Lottery_iOSTests */,
+				354A85C31D5983CF0005B7E6 /* Lottery_iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		354A859E1D5983CF0005B7E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354A85B31D5983CF0005B7E6 /* LaunchScreen.storyboard in Resources */,
+				354A85B01D5983CF0005B7E6 /* Assets.xcassets in Resources */,
+				354A85AE1D5983CF0005B7E6 /* Main.storyboard in Resources */,
+				354A86361D5B6CFB0005B7E6 /* CodeScan.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		354A85B71D5983CF0005B7E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		354A85C21D5983CF0005B7E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		354A859C1D5983CF0005B7E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354A864B1D5B9A1E0005B7E6 /* CellWithTwoTextFields.m in Sources */,
+				354A86721D5CA2280005B7E6 /* GameStatusCell.m in Sources */,
+				354A85A81D5983CF0005B7E6 /* AppDelegate.m in Sources */,
+				354A86341D5B6B510005B7E6 /* SubLBXScanViewController.m in Sources */,
+				354A86481D5B99FB0005B7E6 /* CellWithLabelAndBtn.m in Sources */,
+				354A86691D5C98A80005B7E6 /* QRCodeVC.m in Sources */,
+				354A865B1D5C679F0005B7E6 /* CellWithImgAndIndicator.m in Sources */,
+				354A864E1D5C00E90005B7E6 /* Activity.m in Sources */,
+				354A866F1D5C9E520005B7E6 /* GameResultVC.m in Sources */,
+				354A865E1D5C67BF0005B7E6 /* InviteCell.m in Sources */,
+				356C29E01D6055490077EB05 /* Activity+Request.m in Sources */,
+				354A86421D5B99CC0005B7E6 /* CellWithTwoLabels.m in Sources */,
+				354A85E71D5A1F310005B7E6 /* Config.m in Sources */,
+				354A86611D5C6B210005B7E6 /* Person.m in Sources */,
+				3525627B1D62F6C900691AFF /* RSA.m in Sources */,
+				354A86551D5C19DD0005B7E6 /* XMRTimePiker.m in Sources */,
+				352562231D61AF3900691AFF /* ConnectManager.m in Sources */,
+				354A863C1D5B6F810005B7E6 /* GameVC.m in Sources */,
+				354A86581D5C5EFF0005B7E6 /* InviteVC.m in Sources */,
+				354A85EA1D5A24140005B7E6 /* LoginVC.m in Sources */,
+				354A862C1D5B3ED00005B7E6 /* HomeVC.m in Sources */,
+				354A85E01D5A1D100005B7E6 /* CALayer+BorderUIColor.m in Sources */,
+				354A86751D5CA2370005B7E6 /* GameResultCell.m in Sources */,
+				354A86511D5C025B0005B7E6 /* PriceCategory.m in Sources */,
+				354A862F1D5B5BB30005B7E6 /* HomeCell.m in Sources */,
+				354A85A51D5983CF0005B7E6 /* main.m in Sources */,
+				354A86451D5B99E90005B7E6 /* CellWithLabelAndTextField.m in Sources */,
+				354A863F1D5B91ED0005B7E6 /* GameSettingVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		354A85B51D5983CF0005B7E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354A85BE1D5983CF0005B7E6 /* Lottery_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		354A85C01D5983CF0005B7E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354A85C91D5983CF0005B7E6 /* Lottery_iOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		354A85BB1D5983CF0005B7E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 354A859F1D5983CF0005B7E6 /* Lottery_iOS */;
+			targetProxy = 354A85BA1D5983CF0005B7E6 /* PBXContainerItemProxy */;
+		};
+		354A85C61D5983CF0005B7E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 354A859F1D5983CF0005B7E6 /* Lottery_iOS */;
+			targetProxy = 354A85C51D5983CF0005B7E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		354A85AC1D5983CF0005B7E6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				354A85AD1D5983CF0005B7E6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		354A85B11D5983CF0005B7E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				354A85B21D5983CF0005B7E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		354A85CB1D5983CF0005B7E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		354A85CC1D5983CF0005B7E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		354A85CE1D5983CF0005B7E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Lottery_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"SVProgressHUD\"",
+					"-l\"AFNetworking\"",
+					"-framework",
+					"\"QuartzCore\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zhaolei.Lottery-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		354A85CF1D5983CF0005B7E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Lottery_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"SVProgressHUD\"",
+					"-l\"AFNetworking\"",
+					"-framework",
+					"\"QuartzCore\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "zhaolei.Lottery-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		354A85D11D5983CF0005B7E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Lottery_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "zhaolei.Lottery-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lottery_iOS.app/Lottery_iOS";
+			};
+			name = Debug;
+		};
+		354A85D21D5983CF0005B7E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Lottery_iOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "zhaolei.Lottery-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lottery_iOS.app/Lottery_iOS";
+			};
+			name = Release;
+		};
+		354A85D41D5983CF0005B7E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Lottery_iOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "zhaolei.Lottery-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lottery_iOS;
+			};
+			name = Debug;
+		};
+		354A85D51D5983CF0005B7E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Lottery_iOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "zhaolei.Lottery-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Lottery_iOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		354A859B1D5983CF0005B7E6 /* Build configuration list for PBXProject "Lottery_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354A85CB1D5983CF0005B7E6 /* Debug */,
+				354A85CC1D5983CF0005B7E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		354A85CD1D5983CF0005B7E6 /* Build configuration list for PBXNativeTarget "Lottery_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354A85CE1D5983CF0005B7E6 /* Debug */,
+				354A85CF1D5983CF0005B7E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		354A85D01D5983CF0005B7E6 /* Build configuration list for PBXNativeTarget "Lottery_iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354A85D11D5983CF0005B7E6 /* Debug */,
+				354A85D21D5983CF0005B7E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		354A85D31D5983CF0005B7E6 /* Build configuration list for PBXNativeTarget "Lottery_iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				354A85D41D5983CF0005B7E6 /* Debug */,
+				354A85D51D5983CF0005B7E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 354A85981D5983CF0005B7E6 /* Project object */;
+}

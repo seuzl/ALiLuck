@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单元测试页面</title>
+    <link href="//cdn.bootcss.com/mocha/3.0.0-2/mocha.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/mocha/3.0.0-2/mocha.js"></script>
+    <script src="//cdn.bootcss.com/chai/3.5.0/chai.js"></script>
+    <script src="../request.js"></script>
+    <script src="../img.js"></script>
+</head>
+<body>
+    <div id="mocha"></div>
+    <script>
+        mocha.setup('bdd');
+        chai.should();
+        var expect = chai.expect;
+        describe("组件单元测试", function() {
+            let request = new Request("http://30.4.140.16:8080/home/login.do");
+            it("图片处理检测", function() {
+                expect(typeof SI.img).to.be.equal("function")
+            });
+            it("Request类检测", function() {
+                expect(request instanceof Request).to.be.equal(true);
+            });
+            it("POST请求检测", function() {
+                request.post({
+                    "user_id": "guangyu.tgy",
+                    "password": "tgy199405.24"
+                }, function(data) {
+                    try {
+                        expect(data).to.be.an("object");
+                    }catch(e){}
+                })
+            });
+        });
+        mocha.run();
+    </script>
+</body>
+</html>

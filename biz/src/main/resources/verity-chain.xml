@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans:beans default-autowire="byName"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:p="http://www.springframework.org/schema/p"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd ">
+
+    <!-- 验证任务链 -->
+    <beans:bean id="signInCheckChain"
+                class="com.taobao.lottery.biz.chain.verity.VerityChain"
+                init-method="init">
+        <beans:property name="commands">
+            <beans:list>
+                <!-- 任务链有序-->
+                <beans:ref bean="paramCheck" />
+                <beans:ref bean="identityCheck" />
+                <beans:ref bean="positionCheck"/>
+
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+    <!-- 扫码验证链-->
+    <beans:bean id="scanCodeChain"
+                class="com.taobao.lottery.biz.chain.verity.ScanCodeChain"
+                init-method="init">
+        <beans:property name="commands">
+            <beans:list>
+                <!-- 任务链有序-->
+                <!-- 只需要验证参入的参数 -->
+                <beans:ref bean="joinMethodCheck"/>
+                <beans:ref bean="paramCheck" />
+                <beans:ref bean="identityCheck"/>
+                <!--<beans:ref bean="identityCheck" />-->
+                <!--<beans:ref bean="positionCheck"/>-->
+
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+    <!--参数验证-->
+    <beans:bean id="paramCheck"
+                class="com.taobao.lottery.biz.chain.verity.ParamCheck" />
+    <!--身份验证-->
+    <beans:bean id="identityCheck"
+                class="com.taobao.lottery.biz.chain.verity.IdentityCheck" />
+    <!--地理位置验证-->
+    <beans:bean id="positionCheck"
+                class="com.taobao.lottery.biz.chain.verity.PositionCheck"/>
+    <!--扫码type验证-->
+    <beans:bean id="joinMethodCheck"
+                class="com.taobao.lottery.biz.chain.verity.JoinMethodCheck"/>
+
+
+    <!--中奖模型-->
+    <beans:bean id="randomLottery"
+                class="com.taobao.lottery.biz.algorithm.RandomLottery"/>
+
+</beans:beans>

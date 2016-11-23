@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/components/style/reset.css">
+    <link rel="stylesheet" href="/components/style/bigScreen/bigScreen.css">
+    <style>
+        .hengfu {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+        .plane {
+            position: absolute;
+            width: 550px;
+        }
+        .plane img {
+            width: 100%;
+        }
+        .wrap {
+            width: 550px;
+            height: 202px;
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            transform: translate3d(100%, -50%, 0);
+        }
+        .hengfu .text {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            color: #fff;
+            left: 175px;
+            font-size: 25px;
+            top: 59px;
+        }
+        .fly-in {
+            animation: fly-in linear 10s;
+        }
+        @keyframes fly-in {
+            100% {
+                transform: translate3d(-1600px, -50%, 0);
+            }
+        }
+        #gameContainer {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="hengfu">
+        <div id="gameContainer">
+            <img src="http://gw.alicdn.com/bao/uploaded/TB1e2FhLpXXXXXoaXXXXXXXXXXX-128-251.png" alt="" id="texture" style="display: none;">
+        </div>
+        <div class="wrap fly-in">
+            <div class="plane">
+                <img src="/source/bigScreen/hengfu.png" alt="">
+            </div>
+            <div class="text">恭喜青乌获得一等奖</div>
+        </div>
+    </div>
+    <div class="contain">
+        <div class="header">
+            <h1>淘宝无线前端团队抽奖活动</h1>
+            <h2><img src="/source/bigScreen/h2title.png" alt=""></h2>
+        </div>
+        <div class="center">
+            <div class="time" id="time">
+                <span id="h">00</span>:
+                <span id="m">00</span>:
+                <span id="s">00</span>
+            </div>
+        </div>
+        <div class="mingdan">
+            <ul>
+                <li>
+                    <div class="img-wrap">
+                        <img src="/source/bigScreen/hongbao.gif" alt="">
+                    </div>
+                    <div class="content">
+                        <span class="level">一等奖 : </span>
+                        <span>青乌</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap">
+                        <img src="/source/bigScreen/hongbao.gif" alt="">
+                    </div>
+                    <div class="content">
+                        <span class="level">一等奖 : </span>
+                        <span>青乌</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="img-wrap">
+                        <img src="/source/bigScreen/hongbao.gif" alt="">
+                    </div>
+                    <div class="content">
+                        <span class="level">一等奖 : </span>
+                        <span>青乌</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <!--<ul class="bottom-hongbao">
+                <li><img src="/source/bigScreen/hongbao.gif" alt=""></li>
+                <li><img src="/source/bigScreen/hongbao.gif" alt=""></li>
+                <li><img src="/source/bigScreen/hongbao.gif" alt=""></li>
+                <li><img src="/source/bigScreen/hongbao.gif" alt=""></li>
+                <li><img src="/source/bigScreen/hongbao.gif" alt=""></li>
+            </ul>-->
+        </div>
+    </div>
+    <script src="/hilo.js"></script>
+    <script>
+        var dpr = window.devicePixelRatio > 1 ? 2 : 1;
+        var gameContainer = document.getElementById("gameContainer"),
+                stageHeight = gameContainer.offsetHeight,
+                stageWidth = gameContainer.offsetWidth;
+        function initAnimate(){
+            var stage = new Hilo.Stage({
+                renderType: "canvas",
+                container: gameContainer,
+                width: stageWidth,
+                height: stageHeight
+            });
+
+            //start stage ticker
+            var ticker = new Hilo.Ticker(60);
+            ticker.addTick(stage);
+            ticker.addTick(Hilo.Tween);
+            ticker.start();
+
+            var img = document.getElementById("texture");
+            var particleSystem = new Hilo.ParticleSystem({
+                x:0,
+                y:0,
+                emitNum:20,
+                emitTime:1,
+                particle:{
+                    frame:[
+                        [75, 236, 7, 11],
+                        [119, 223, 7, 17],
+                        [90, 223, 22, 17],
+                        [51, 202, 17, 46],
+                        [94, 59, 34, 59],
+                        [60, 160, 34, 42],
+                        [30, 99, 30, 99],
+                        [7, 240, 7, 11],
+                        [119, 206, 7, 17],
+                        [90, 206, 22, 17],
+                        [111, 160, 17, 46],
+                        [60, 59, 34, 59],
+                        [94, 118, 34, 42],
+                        [30, 0, 30, 99],
+                        [68, 236, 7, 11],
+                        [112, 223, 7, 17],
+                        [68, 219, 22, 17],
+                        [94, 160, 17, 46],
+                        [94, 0, 34, 59],
+                        [60, 118, 34, 42],
+                        [0, 99, 30, 99],
+                        [0, 240, 7, 11],
+                        [112, 206, 7, 17],
+                        [68, 202, 22, 17],
+                        [34, 198, 17, 46],
+                        [60, 0, 34, 59],
+                        [0, 198, 34, 42],
+                        [0, 0, 30, 99]
+                    ],
+                    image:img,
+                    life:22,
+                    alphaV:-.01,
+                    vxVar:300,
+                    vyVar:300,
+                    axVar:200,
+                    ayVar:200,
+                    scale: 1,
+                    rotationVar:360,
+                    rotationVVar:4,
+                    pivotX:.5,
+                    pivotY:.5
+                }
+            });
+            stage.addChild(particleSystem);
+            particleSystem.start();
+
+            ticker.addTick({
+                tick:function(){
+                    particleSystem.emitterX = Math.random() * stageWidth;
+                    particleSystem.emitterY = Math.random() * stageHeight;
+                }
+            })
+        }
+    </script>
+    <script>
+        //倒计时
+        function countDown(endTime) {
+            var interval;
+            var hEle = document.getElementById("h");
+            var mEle = document.getElementById("m");
+            var sEle = document.getElementById("s");
+            function getRTime(){
+                var nowTime = new Date();
+                var t =endTime.getTime() - nowTime.getTime();
+
+                if(t <= 0) {
+                    clearInterval(interval);
+                    return;
+                }
+
+                var h = String(Math.floor(t / 1000 / 60 / 60 % 24));
+                var m = String(Math.floor(t / 1000 / 60 % 60));
+                var s = String(Math.floor(t / 1000 % 60));
+
+
+                h = h.length === 1 ? "0" + h : h;
+                m = m.length === 1 ? "0" + m : m;
+                s = s.length === 1 ? "0" + s : s;
+
+                hEle.textContent = h;
+                mEle.textContent = m;
+                sEle.textContent = s;
+            }
+            interval = setInterval(getRTime, 1000);
+        }
+        countDown(new Date(+new Date() + 1000 * 60 * 2));
+        initAnimate();
+    </script>
+</body>
+</html>

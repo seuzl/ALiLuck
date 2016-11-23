@@ -1,0 +1,51 @@
+//第一阶段： 请求活动列表
+//前端发送：GET
+{
+    "userName": {String},      //用户姓名
+    "wordId": {String}，       //工号
+    "position": {String}       //地理位置
+}
+
+//第二阶段：通过列表进入活动场景
+//前端发送：GET
+{
+    "workId": {String},        //工号
+    "gameId": {String}          //游戏ID
+}
+//后端发送：JSON
+{
+    "serverTime": {String},      //服务器时间
+    "startTime": {String},       //活动开始时间
+    "delayTime": {String},       //延迟时间
+    "successHref": {String}      //最后活动展示页面地址
+}
+
+//第三阶段：活动开始时间
+//前端发送：POST请求
+[
+    {
+        //活动数据1
+    }，
+    {
+        //活动数据二
+    }
+]
+//后端返回：JSON
+{
+    "state": {Number},     //状态码 
+    "other": {Object}      //额外信息
+}
+//全体阶段：
+//请求css、js文件
+//前端发送GET: ?fisrt_css@1.0&second_css@2.0@first_js@3.1.1
+//后端返回：
+[
+    {
+        "name": "文件名",
+        "content"： "内容"
+    },
+    {
+        "name": "first_css@1.0",
+        "content": "body{font: 14px .....;}"
+    }
+]
