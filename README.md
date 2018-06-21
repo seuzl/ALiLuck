@@ -1,6 +1,5 @@
 # 项目简介
-这是在手淘实习-[海豹突击队](http://news.laiwang.com/message/news_view.htm?pub_uid=4503417&msg_id=105239620&index=0)项目中做的一款抽奖
-应用。利用 iOS7 [MultipeerConnectivity](https://developer.apple.com/documentation/multipeerconnectivity?changes=_3) 近场通信技术建立 P2P 网络进行通信，模拟解决由于场地信号差无法参与抽奖的情况。视频展示了手机在断网条件下正常完成网络通信（登录、抽奖流程）的过程。 
+这是在手淘实习-[海豹突击队](http://news.laiwang.com/message/news_view.htm?pub_uid=4503417&msg_id=105239620&index=0)项目中做的一款抽奖应用。利用 iOS7 [MultipeerConnectivity](https://developer.apple.com/documentation/multipeerconnectivity?changes=_3) 近场通信技术建立 P2P 网络进行通信，模拟解决由于场地信号差无法参与抽奖的情况。视频展示了手机在断网条件下正常完成网络通信（登录、抽奖流程）的过程。 
 
 [ALiLuck 建立奖项流程](https://v.youku.com/v_show/id_XMzY3NzcxOTU2OA==.html?spm=a2h3j.8428770.3416059.1)
 
