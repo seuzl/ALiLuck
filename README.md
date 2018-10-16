@@ -21,6 +21,6 @@
 	iPhone 6S Plus
 # 图解原理
 ### 会话建立流程
-![](http://seuzl.qiniudn.com/md/1529565683900.png)
+![](https://i.loli.net/2018/10/16/5bc5aea967d61.png)
 ### 通信流程
-![](http://seuzl.qiniudn.com/md/1529565826390.png)
+![](https://i.loli.net/2018/10/16/5bc5aea9a2f95.png)
